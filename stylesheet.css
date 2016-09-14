@@ -1,8 +1,13 @@
 .img-circle {
     
-    margin-left:2%;
+    
 	border-radius: 50%;
-    float: left;
+    
+}
+.ImageandCaption {
+	margin-right:2%;
+	float: right;
+
 }
 body {
     background-color: #6e6e6e;
@@ -32,5 +37,8 @@ font-style: italic;
 	font-weight: 700;
 	font-style: italic;
 	
+
+}
+.introdiv {
 
 }
