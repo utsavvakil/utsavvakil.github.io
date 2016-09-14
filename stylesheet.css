@@ -1,12 +1,25 @@
 .img-circle {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
     border-radius: 50%;
 }
 body {
     background-color: #6e6e6e;
 }
+.image {
+	text-align: center;
+}
+.caption {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
 .intro {
-font-family: 'Roboto: 100i', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-weight: 100;
+font-style: italic;
 }
 .introduction {
-	font-family: 'Roboto: 700', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 }
