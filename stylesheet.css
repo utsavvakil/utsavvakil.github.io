@@ -22,4 +22,12 @@ font-style: italic;
 .introduction {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
+	text-decoration: underline;
+}
+.name {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	text-decoration: underline;
+
 }
