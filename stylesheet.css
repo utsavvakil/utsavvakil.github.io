@@ -1,3 +1,12 @@
 .img-circle {
     border-radius: 50%;
 }
+body {
+    background-color: #6e6e6e;
+}
+.intro {
+font-family: 'Roboto: 100i', sans-serif;
+}
+.introduction {
+	font-family: 'Roboto: 700', sans-serif;
+}
