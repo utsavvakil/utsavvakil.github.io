@@ -1,13 +1,16 @@
 .img-circle {
-    border-radius: 50%;
+    
+    margin-left:2%;
+	border-radius: 50%;
+    float: left;
 }
 body {
     background-color: #6e6e6e;
 }
-.image {
-	margin: auto;
-    width: 50%;
-    padding: 10px;
+.TitleImage {
+	width:100%;
+    height:auto;
+    padding:1%;
 	text-align: center;
 }
 .caption {
@@ -22,12 +25,12 @@ font-style: italic;
 .introduction {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
-	text-decoration: underline;
+	
 }
 .nameUtsav {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-style: italic;
-	text-decoration: underline;
+	
 
 }
