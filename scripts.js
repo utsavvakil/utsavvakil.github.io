@@ -1,5 +1,7 @@
 function myFunction() {
-	if(document.getElementById("imagecaption")=="Net ID: uuv2")
+
+	var id = document.getElementById("imagecaption");
+	if(document.getElementById("imagecaption").innerHTML=="Net ID: uuv2")
 	{
 		document.getElementById("imagecaption").innerHTML = "Hello World";
 	}
