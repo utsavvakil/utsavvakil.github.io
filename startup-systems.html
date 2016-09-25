@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,500i,700,700i" rel="stylesheet">
 
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,6 +32,29 @@
 	<p class="intro"> I am Utsav U Vakil. I am a Graduate Student at Cornell Tech. I am pursuing Masters of Science in Information Systems, with a specialization in Health Tech.</p>
 </div>
 </div>
+<div>
+	<h1 class="introduction"> This is where I study. </h1>
+	<h3 class = "location">My Google Maps Demo</h3>
+    <div id="map"></div>
+</div>
+<script>
+
+      function initMap() {
+        var uluru = {lat: 40.741355, lng: -74.003203};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+
+ </script>
+ <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ_n67WvzxTqKmYTfX09F3lME389V49YQ&callback=initMap">
+ </script>
 
 
 </body>
