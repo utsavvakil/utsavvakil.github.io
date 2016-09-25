@@ -21,7 +21,18 @@
 <div id="container">
 <div class="TitleImage">
 	<figure class="ImageandCaption">
-		<img class="img-circle" src="UtsavUVakil.jpg" alt="Self Image" style="width:228px;height:228px;" onclick="myFunction()">
+		<img class="img-circle" id="myImg" src="UtsavUVakil.jpg" alt="Utsav U Vakil" style="width:228px;height:228px;" onclick="myFunction()">
+		<div id="myModal" class="modal">
+
+  			<!-- The Close Button -->
+  			<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  			<!-- Modal Content (The Image) -->
+  			<img class="modal-content" id="img01">
+
+  			<!-- Modal Caption (Image Text) -->
+  			<div id="caption"></div>
+		</div>
 		<figcaption class="caption" id="imagecaption" >Net ID: uuv2</figcaption>
 	</figure>
 	<h1 class="nameUtsav">Utsav U Vakil</h1>
@@ -32,6 +43,8 @@
 	<p class="intro"> I am Utsav U Vakil. I am a Graduate Student at Cornell Tech. I am pursuing Masters of Science in Information Systems, with a specialization in Health Tech.</p>
 </div>
 </div>
+
+
 <div>
 	<h1 class="introduction"> This is where I study. </h1>
 	<h3 class = "location">My Google Maps Demo</h3>
