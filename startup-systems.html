@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Utsav's homepage</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,500i,700,700i" rel="stylesheet">
 
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-84206101-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+var count=0;
+      $.ajax({
+        url:'https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB/top-tracks?country=SE',
+        dataType: 'json',
+        success: function(result){
+        	$('#toptracksTable').append('<tr><th>Song Name</th><th>Preview Song</th><th>Album Artwork</th></tr>');
+          for (var i = 0; i < result.tracks.length; i++)
+          {
+          	count=count+1;
+            var songname = result.tracks[i].name;
+            var preview = result.tracks[i].preview_url;
+            var album_cover = result.tracks[i].album.images[0].url;
+            $('#toptracksTable').append('<tr><td>' + songname + '</td><td><audio controls><source src="'+preview+'"></audio></td><td><img src="'+album_cover+'" alt="Album Cover" class="albumcover" id="'+i+'" style="width:30px; height=30px;" onclick="document.getElementById('+i+').function(){modal.style.display = "block; modalImg.src = this.src; captionText.innerHTML = this.alt"};"></td></tr>');
+           /* var image = document.getElementById(i);
+            image.onclick=function(){
+            
+            };*/
+          }
+        }
+      });
+      /*function albumCover(image)
+      {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt; 
+      }*/
+    </script>
 </head>
 <body>
 
@@ -27,12 +48,12 @@
   			<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 
   			<!-- Modal Content (The Image) -->
-  			<img class="modal-content" id="img01">
+  			<img class="modal-content" id="img01" alt="Image Caption" src="UtsavUVakil.jpg">
 
   			<!-- Modal Caption (Image Text) -->
   			<div id="caption"></div>
 		</div>
-		<script type="text/javascript" src="scripts.js"></script>
+		
 		<figcaption class="caption" id="imagecaption" >Net ID: uuv2</figcaption>
 	</figure>
 	<h1 class="nameUtsav">Utsav U Vakil</h1>
@@ -44,31 +65,15 @@
 </div>
 </div>
 
-
 <div>
-	<h1 class="introduction"> This is where I study. </h1>
-	<h3 class = "location">My Google Maps Demo</h3>
-    <div id="map"></div>
+
+	<h1 class="introduction"> My favorite Artist <a href="https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB">Metallica</a> and their top tracks on Spotify</h1>
+	<div id="TopTracks" style="width: 100%;"> 
+  <table id="toptracksTable">
+    
+  </table></div>
 </div>
-<script>
-
-      function initMap() {
-        var uluru = {lat: 40.741355, lng: -74.003203};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 20
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-
- </script>
- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ_n67WvzxTqKmYTfX09F3lME389V49YQ&callback=initMap">
- </script>
-
-
+<script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
 
