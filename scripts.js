@@ -10,7 +10,12 @@ img.onclick = function(){
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
 };
-
+function albumCover(image)
+      {
+          modal.style.display = "block";
+          modalImg.src = image.src;
+          captionText.innerHTML = image.alt; 
+      }
 
 
 // Get the <span> element that closes the modal
